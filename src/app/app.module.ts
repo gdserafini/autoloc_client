@@ -11,6 +11,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarsListComponent } from './cars-list/cars-list.component';
+import { AboutComponent } from './about/about.component';
+import { AccountFormsComponent } from './account-forms/account-forms.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +27,16 @@ import { LoginComponent } from './login/login.component';
     LayoutComponent,
     HomeComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    CarsListComponent,
+    AboutComponent,
+    AccountFormsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
     provideClientHydration()
