@@ -14,7 +14,7 @@ import { AccountFormsComponent } from './account-forms/account-forms.component';
 import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
-  {path: "layout", component: LayoutComponent, 
+  {path: "", component: LayoutComponent, 
   children: [
     {path: "home", component: HomeComponent},
     {path: "signup", component: SignupComponent},
@@ -23,11 +23,11 @@ const routes: Routes = [
     {path: "about", component: AboutComponent},
     {path: "carsList", component: CarsListComponent},
     {path: "accountForm", component: AccountFormsComponent},
-    {path: "account", component: AccountComponent}
-  ]},
-  {path: "user", component: UserComponent},
-  {path: "customer", component: CustomerComponent},
-  {path: "car", component: CarComponent}
+    {path: "account", component: AccountComponent},
+    {path: "user", component: UserComponent},
+    {path: "customer", component: CustomerComponent},
+    {path: "car", component: CarComponent}
+  ]}
 ];
 
 @NgModule({
