@@ -16,7 +16,7 @@ import { AccountComponent } from './account/account.component';
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
   children: [
-    {path: "home", component: HomeComponent},
+    {path: "", component: HomeComponent},
     {path: "signup", component: SignupComponent},
     {path: "login", component: LoginComponent},
     {path: "rent", component: RentComponent},
