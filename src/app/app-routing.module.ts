@@ -6,12 +6,12 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { CustomerComponent } from './customer/customer.component';
-import { CarComponent } from './car/car.component';
 import { RentComponent } from './rent/rent.component';
 import { AboutComponent } from './about/about.component';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { AccountFormsComponent } from './account-forms/account-forms.component';
 import { AccountComponent } from './account/account.component';
+import { CreateCarComponent } from './cars/create-car/create-car.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -26,7 +26,7 @@ const routes: Routes = [
     {path: "account", component: AccountComponent},
     {path: "user", component: UserComponent},
     {path: "customer", component: CustomerComponent},
-    {path: "car", component: CarComponent}
+    {path: "create-car", component: CreateCarComponent}
   ]}
 ];
 
