@@ -20,6 +20,7 @@ import { UpdateCarComponent } from './cars/update-car/update-car.component';
 import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
 import { firebase } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebase)
+    AngularFireModule.initializeApp(firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
     provideClientHydration()

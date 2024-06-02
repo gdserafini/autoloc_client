@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { CarModel } from '../model/car-model';
+import { CarServiceService } from '../service/car-service.service';
+
 
 @Component({
   selector: 'app-create-car',
@@ -23,10 +26,10 @@ export class CreateCarComponent {
     '', [
       Validators.required, 
       Validators.min(0),
-      Validators.pattern('[0-9]{9999999}')
+      Validators.pattern('[0-9]{0,9999999}')
   ]);
 
-  constructor(){}
+  constructor(private service: CarServiceService){}
 
   ngOnInit(): void {}
 
@@ -37,6 +40,12 @@ export class CreateCarComponent {
         console.log('Dados inválidos');
         return;
     }
-    console.log('Carro salvo');
+    const car = new CarModel();
+    car.brand = this.brand.value;
+    car.mileage = this.mileage.value;
+    car.model = this.model.value;
+    car.year = this.year.value;
+    car.color = this.color.value;
+    this.service.saveCar(car);
   }
 }
