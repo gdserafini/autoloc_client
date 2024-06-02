@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
@@ -10,7 +9,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { AboutComponent } from './about/about.component';
 import { AccountFormsComponent } from './account-forms/account-forms.component';
@@ -20,6 +18,8 @@ import { CreateCarComponent } from './cars/create-car/create-car.component';
 import { ReadCarComponent } from './cars/read-car/read-car.component';
 import { UpdateCarComponent } from './cars/update-car/update-car.component';
 import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
+import { firebase } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -43,8 +43,8 @@ import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebase)
   ],
   providers: [
     provideClientHydration()
