@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './delete-car.component.css'
 })
 export class DeleteCarComponent {
-
+  
 }

@@ -22,6 +22,6 @@ export class CarServiceService {
   }
 
   delete(code: string){
-    console.log('Deletado');
+    return this.db.object('cars/'+code).remove();
   }
 }

@@ -13,6 +13,7 @@ import { AccountFormsComponent } from './account-forms/account-forms.component';
 import { AccountComponent } from './account/account.component';
 import { CreateCarComponent } from './cars/create-car/create-car.component';
 import { ReadCarComponent } from './cars/read-car/read-car.component';
+import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path: "user", component: UserComponent},
     {path: "customer", component: CustomerComponent},
     {path: "create-car", component: CreateCarComponent},
-    {path: "read-car", component: ReadCarComponent}
+    {path: "read-car", component: ReadCarComponent},
+    {path: "delete-car", redirectTo: "read-car"}
   ]}
 ];
 
