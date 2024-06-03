@@ -13,11 +13,15 @@ export class CarServiceService {
     return this.db.list('cars').push(car);
   }
 
-  readCar(model: string){}
+  readAllCars(){
+    return this.db.list('cars').snapshotChanges();
+  }
 
-  listCars(){}
+  update(code: string, data: CarModel){
+    console.log('Atualizado');
+  }
 
-  update(model: string, data: CarModel){}
-
-  delete(model: string){}
+  delete(code: string){
+    console.log('Deletado');
+  }
 }

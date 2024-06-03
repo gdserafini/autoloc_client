@@ -12,6 +12,7 @@ import { CarsListComponent } from './cars-list/cars-list.component';
 import { AccountFormsComponent } from './account-forms/account-forms.component';
 import { AccountComponent } from './account/account.component';
 import { CreateCarComponent } from './cars/create-car/create-car.component';
+import { ReadCarComponent } from './cars/read-car/read-car.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -26,7 +27,8 @@ const routes: Routes = [
     {path: "account", component: AccountComponent},
     {path: "user", component: UserComponent},
     {path: "customer", component: CustomerComponent},
-    {path: "create-car", component: CreateCarComponent}
+    {path: "create-car", component: CreateCarComponent},
+    {path: "read-car", component: ReadCarComponent}
   ]}
 ];
 

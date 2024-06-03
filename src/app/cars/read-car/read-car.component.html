@@ -1,1 +1,26 @@
-<p>read-car works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Cor</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Kilometragem</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of carsList;">
+            <th scope="row">{{car.key}}</th>
+            <td>{{car.brand}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.mileage}}</td>
+            <td>
+            <button class="btn btn-warning" (click)="updateCar(car.key)">Editar</button> &nbsp;
+            <button class="btn btn-danger" (click)="deleteCar(car.key)">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
