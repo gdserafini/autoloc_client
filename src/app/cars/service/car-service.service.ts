@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { CarModel } from '../model/car-model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarServiceService {
-  
+  dbCar?: any;
+
   constructor(private db: AngularFireDatabase) {}
   
   saveCar(car: CarModel){
@@ -17,11 +19,15 @@ export class CarServiceService {
     return this.db.list('cars').snapshotChanges();
   }
 
-  update(code: string, data: CarModel){
-    console.log('Atualizado');
+  update(code: string, car: CarModel){
+    return this.db.object('cars/'+code).update(car);
   }
 
   delete(code: string){
     return this.db.object('cars/'+code).remove();
+  }
+
+  getCar(code: string){
+    return this.db.object('cars/'+code).valueChanges();
   }
 }

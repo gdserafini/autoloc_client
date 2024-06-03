@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarServiceService } from '../service/car-service.service';
 import { CarModel } from '../model/car-model';
 import { map } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-read-car',
@@ -11,7 +12,10 @@ import { map } from 'rxjs';
 export class ReadCarComponent implements OnInit{
   public carsList: any;
 
-  constructor(private service: CarServiceService){}
+  constructor(
+    private service: CarServiceService,
+    private router: Router
+  ){}
 
   ngOnInit(): void { this.listCars(); }
 
@@ -30,7 +34,7 @@ export class ReadCarComponent implements OnInit{
   }
 
   updateCar(code: string){ 
-    return this.service.update(code, new CarModel()); 
+    this.router.navigate(['/update-car/'+code]);
   }
 
   deleteCar(code: string){

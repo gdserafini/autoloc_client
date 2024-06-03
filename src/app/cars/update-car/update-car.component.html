@@ -1,1 +1,34 @@
-<p>update-car works!</p>
+<h1>Cadastro de veículos</h1>
+<div>
+    <div class="mb-3">
+        <label for="brand" class="form-label">Marca:</label>
+        <input type="text" class="form-control" id="brand"
+            placeholder="Insira a marca do veículo."
+            [formControl]="brand">
+    </div>
+    <div class="mb-3">
+        <label for="model" class="form-label">Modelo:</label>
+        <input type="text" class="form-control" id="model"
+            placeholder="Insira o modelo do veículo."
+            [formControl]="model">
+    </div>
+    <div class="mb-3">
+        <label for="color" class="form-label">Cor:</label>
+        <input type="text" class="form-control" id="color"
+            placeholder="Insira a cor do veículo."
+            [formControl]="color">
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label">Ano:</label>
+        <input type="number" class="form-control" id="year"
+            placeholder="Insira o ano do veículo."
+            [formControl]="year">
+    </div>
+    <div class="mb-3">
+        <label for="mileage" class="form-label">Kilometragem:</label>
+        <input type="number" class="form-control" id="mileage"
+            placeholder="Insira a kilometragem do veículo."
+            [formControl]="mileage">
+    </div>
+    <button class="btn btn-primary" (click)="update()">Atualizar</button>
+</div> 

@@ -14,6 +14,7 @@ import { AccountComponent } from './account/account.component';
 import { CreateCarComponent } from './cars/create-car/create-car.component';
 import { ReadCarComponent } from './cars/read-car/read-car.component';
 import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
+import { UpdateCarComponent } from './cars/update-car/update-car.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -30,7 +31,7 @@ const routes: Routes = [
     {path: "customer", component: CustomerComponent},
     {path: "create-car", component: CreateCarComponent},
     {path: "read-car", component: ReadCarComponent},
-    {path: "delete-car", redirectTo: "read-car"}
+    {path: "update-car/:code", component: UpdateCarComponent}
   ]}
 ];
 
