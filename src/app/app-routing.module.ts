@@ -17,6 +17,9 @@ import { UpdateCarComponent } from './cars/update-car/update-car.component';
 import { CreateStoreComponent } from './stores/create-store/create-store.component';
 import { UpdateStoreComponent } from './stores/update-store/update-store.component';
 import { ReadStoreComponent } from './stores/read-store/read-store.component';
+import { CreateUserComponent } from './users/create-user/create-user.component';
+import { ReadUserComponent } from './users/read-user/read-user.component';
+import { UpdateUserComponent } from './users/update-user/update-user.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -36,7 +39,10 @@ const routes: Routes = [
     {path: "update-car/:code", component: UpdateCarComponent},
     {path: "create-store", component: CreateStoreComponent},
     {path: "read-store", component: ReadStoreComponent},
-    {path: "update-store/:code", component: UpdateStoreComponent}
+    {path: "update-store/:code", component: UpdateStoreComponent},
+    {path: "create-user", component: CreateUserComponent},
+    {path: "read-user", component: ReadUserComponent},
+    {path: "update-user/:code", component: UpdateUserComponent}
   ]}
 ];
 
