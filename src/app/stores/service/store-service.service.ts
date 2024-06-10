@@ -26,7 +26,7 @@ export class StoreServiceService {
     return this.db.object('stores/'+code).remove();
   }
 
-  getCar(code: string){
+  getStore(code: string){
     return this.db.object('stores/'+code).valueChanges();
   }
 }
