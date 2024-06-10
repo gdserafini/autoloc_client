@@ -14,7 +14,7 @@ export class StoreServiceService {
     return this.db.list('stores').push(store);
   }
 
-  readAllStore(){
+  readAllStores(){
     return this.db.list('stores').snapshotChanges();
   }
 
