@@ -21,6 +21,14 @@ import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
 import { firebase } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { CreateUserComponent } from './users/create-user/create-user.component';
+import { DeleteUserComponent } from './users/delete-user/delete-user.component';
+import { ReadUserComponent } from './users/read-user/read-user.component';
+import { UpdateUserComponent } from './users/update-user/update-user.component';
+import { CreateStoreComponent } from './stores/create-store/create-store.component';
+import { DeleteStoreComponent } from './stores/delete-store/delete-store.component';
+import { ReadStoreComponent } from './stores/read-store/read-store.component';
+import { UpdateStoreComponent } from './stores/update-store/update-store.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +47,15 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     CreateCarComponent,
     ReadCarComponent,
     UpdateCarComponent,
-    DeleteCarComponent
+    DeleteCarComponent,
+    CreateUserComponent,
+    DeleteUserComponent,
+    ReadUserComponent,
+    UpdateUserComponent,
+    CreateStoreComponent,
+    DeleteStoreComponent,
+    ReadStoreComponent,
+    UpdateStoreComponent
   ],
   imports: [
     BrowserModule,

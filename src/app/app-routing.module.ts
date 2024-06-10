@@ -13,8 +13,10 @@ import { AccountFormsComponent } from './account-forms/account-forms.component';
 import { AccountComponent } from './account/account.component';
 import { CreateCarComponent } from './cars/create-car/create-car.component';
 import { ReadCarComponent } from './cars/read-car/read-car.component';
-import { DeleteCarComponent } from './cars/delete-car/delete-car.component';
 import { UpdateCarComponent } from './cars/update-car/update-car.component';
+import { CreateStoreComponent } from './stores/create-store/create-store.component';
+import { UpdateStoreComponent } from './stores/update-store/update-store.component';
+import { ReadStoreComponent } from './stores/read-store/read-store.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -31,7 +33,10 @@ const routes: Routes = [
     {path: "customer", component: CustomerComponent},
     {path: "create-car", component: CreateCarComponent},
     {path: "read-car", component: ReadCarComponent},
-    {path: "update-car/:code", component: UpdateCarComponent}
+    {path: "update-car/:code", component: UpdateCarComponent},
+    {path: "create-store", component: CreateStoreComponent},
+    {path: "read-store", component: ReadStoreComponent},
+    {path: "update-store/:code", component: UpdateStoreComponent}
   ]}
 ];
 
