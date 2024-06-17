@@ -3,7 +3,6 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
-import { RentComponent } from './rent/rent.component';
 import { UserComponent } from './user/user.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
@@ -29,6 +28,8 @@ import { CreateStoreComponent } from './stores/create-store/create-store.compone
 import { DeleteStoreComponent } from './stores/delete-store/delete-store.component';
 import { ReadStoreComponent } from './stores/read-store/read-store.component';
 import { UpdateStoreComponent } from './stores/update-store/update-store.component';
+import { ListCarsRentalComponent } from './rental/list-cars-rental/list-cars-rental.component';
+import { RentComponent } from './rental/rent/rent.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { UpdateStoreComponent } from './stores/update-store/update-store.compone
     CreateStoreComponent,
     DeleteStoreComponent,
     ReadStoreComponent,
-    UpdateStoreComponent
+    UpdateStoreComponent,
+    ListCarsRentalComponent
   ],
   imports: [
     BrowserModule,

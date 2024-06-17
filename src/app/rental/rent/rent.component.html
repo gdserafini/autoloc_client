@@ -1,0 +1,22 @@
+<h1>Cadastro de veículos</h1>
+<div>
+    <div class="mb-3">
+        <label for="driver" class="form-label">Motorista:</label>
+        <input type="text" class="form-control" id="driver"
+            placeholder="Insira o nome do motorista."
+            [formControl]="driver">
+    </div>
+    <div class="mb-3">
+        <label for="rentalStart" class="form-label">Modelo:</label>
+        <input type="date" class="form-control" id="rentalEnd"
+            placeholder="Insira o inicio da locação."
+            [formControl]="rentalStart">
+    </div>
+    <div class="mb-3">
+        <label for="rentalEnd" class="form-label">Cor:</label>
+        <input type="date" class="form-control" id="rentalEnd"
+            placeholder="Insira a cor do veículo."
+            [formControl]="rentalEnd">
+    </div>
+    <button class="btn btn-primary" (click)="rent()">Reservar</button>
+</div>

@@ -6,7 +6,6 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { CustomerComponent } from './customer/customer.component';
-import { RentComponent } from './rent/rent.component';
 import { AboutComponent } from './about/about.component';
 import { CarsListComponent } from './cars-list/cars-list.component';
 import { AccountFormsComponent } from './account-forms/account-forms.component';
@@ -20,6 +19,8 @@ import { ReadStoreComponent } from './stores/read-store/read-store.component';
 import { CreateUserComponent } from './users/create-user/create-user.component';
 import { ReadUserComponent } from './users/read-user/read-user.component';
 import { UpdateUserComponent } from './users/update-user/update-user.component';
+import { ListCarsRentalComponent } from './rental/list-cars-rental/list-cars-rental.component';
+import { RentComponent } from './rental/rent/rent.component';
 
 const routes: Routes = [
   {path: "", component: LayoutComponent, 
@@ -42,7 +43,9 @@ const routes: Routes = [
     {path: "update-store/:code", component: UpdateStoreComponent},
     {path: "create-user", component: CreateUserComponent},
     {path: "read-user", component: ReadUserComponent},
-    {path: "update-user/:code", component: UpdateUserComponent}
+    {path: "update-user/:code", component: UpdateUserComponent},
+    {path: "rent-list", component: ListCarsRentalComponent},
+    {path: "rent/:code", component: RentComponent}
   ]}
 ];
 
